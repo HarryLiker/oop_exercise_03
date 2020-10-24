@@ -11,8 +11,8 @@ public:
 
     virtual void PrintCoordinates() = 0;
 
-    virtual double Square() = 0;
+    virtual float Square() = 0;
 
-    virtual ~Figure() {}
+    virtual ~Figure();
 };
 

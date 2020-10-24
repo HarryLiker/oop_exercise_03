@@ -5,15 +5,16 @@
 
 class Pentagon: public Figure {
 private:
-    double Center_x;
-    double Center_y;
-    double SideLength;
+    float Center_x;
+    float Center_y;
+    float SideLength;
 
 public:
     Pentagon();
-    Pentagon(double center_x, double center_y, double side);
+    Pentagon(float center_x, float center_y, float side);
+    void GetCenter();
+    void GetSide();
     void PrintCoordinates() override;
-
-    double Square();
-
+    float Square() override;
+    ~Pentagon();
 };
