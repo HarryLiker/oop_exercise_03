@@ -4,7 +4,7 @@
 
 #define PI 3.14159265
 
-Rhombus::Rhombus(): Figure("rhombus"), Center_x(0), Center_y(0), SideLength(0), Angle(40) {}
+Rhombus::Rhombus(): Figure("rhombus"), Center_x(0), Center_y(0), SideLength(0), Angle(90) {}
 
 void Rhombus::GetCenter() {
     std::cin >> Center_x >> Center_y;
@@ -33,7 +33,7 @@ void Rhombus::GetAngle() {
 }
 
 void Rhombus::PrintCenter() {
-    std::cout << "x = " << Center_x << "  " << "y = " << Center_y << "\n";
+    std::cout << "(" << Center_x << ", " << Center_y << ")\n";
 }
 
 void Rhombus::PrintCoordinates() {
@@ -43,13 +43,13 @@ void Rhombus::PrintCoordinates() {
 
     for (int i = 0; i < 4; i++) {
         if(i % 2 == 0) {
-            std::cout << "x" << i + 1 << " = " << Center_x + radius_x << "  ";
-            std::cout << "y" << i + 1 << " = " << 0 << "\n";
+            std::cout << "(x" << i + 1 << ", y)" << i + 1 << " = ";
+            std::cout << "(" << Center_x + radius_x << ", " << 0 << ")\n";
             radius_x *= -1;
         }
         else {
-            std::cout << "x" << i + 1 << " = " << 0 << "  ";
-            std::cout << "y" << i + 1 << " = " << Center_y + radius_y << "\n";
+            std::cout << "(x" << i + 1 << ", y)" << i + 1 << " = ";
+            std::cout << "(" << 0 << ", " << Center_y + radius_y << ")\n";
             radius_y *= -1;
         }
     }

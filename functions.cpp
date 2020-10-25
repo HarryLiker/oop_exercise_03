@@ -1,13 +1,8 @@
 #include <iostream>
-#include <string>
-#include <vector>
 #include "functions.hpp"
-#include "figure.hpp"
-#include "rhombus.hpp"
-#include "pentagon.hpp"
-#include "hexagon.hpp"
 
-Figure *enter_in_figure(std::string figure) {
+// Input function of all figure parameters
+Figure *enter_in_figure(std::string figure) { 
     Figure *ptr_figure = nullptr;
     if (figure == "rhombus") {
         Rhombus *ptr_rhombus = new Rhombus();
@@ -41,6 +36,7 @@ Figure *enter_in_figure(std::string figure) {
     return ptr_figure;
 }
 
+// Enter the figure name and input all figure parameters
 Figure *figure_enter() {
     std::string figure_name;
     std::cout << "Enter a name of figure (Possible names: rhombus, pentagon, hexagon): ";
@@ -53,6 +49,7 @@ Figure *figure_enter() {
     return enter_in_figure(figure_name);
 }
 
+// Summ of squares of all figures
 float square_all_figures(std::vector<Figure*> vector) {
     float square = 0;
     for (int i = 0; i < vector.size(); i++) {
@@ -61,6 +58,7 @@ float square_all_figures(std::vector<Figure*> vector) {
     return square;
 }
 
+// Delete figure in vector
 void figure_delete(std::vector<Figure*> &vector, int index) {
     vector.erase(vector.begin() + index);
 }

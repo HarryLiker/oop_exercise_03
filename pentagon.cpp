@@ -25,23 +25,22 @@ void Pentagon::GetSide() {
 }
 
 void Pentagon::PrintCenter() {
-    std::cout << "x = " << Center_x << "  " << "y = " << Center_y << "\n";
+    std::cout << "(" << Center_x << ", " << Center_y << ")\n";
 }
 
 
 void Pentagon::PrintCoordinates() {
-    // float radius = sqrt( (SideLength * SideLength + 2 * cos(72 * PI / 180)) / 2 );
-    float radius = SideLength / sqrt(2 * (1 - cos(72 * PI / 180)));
+    float radius = SideLength / sqrt(2 * (1 - cos(72 * PI / 180))); // Radius to get coorditates
     for(int i = 0; i < 5; i++) {
         float x = Center_x + cos(72 * i * PI / 180) * radius;
         float y = Center_y + sin(72 * i * PI / 180) * radius;
-        std::cout << "x" << i + 1 << " = " << round(x * 10000) / 10000 << "  ";
-        std::cout << "y" << i + 1 << " = " << round(y * 10000) / 10000 << "\n";
+        std::cout << "(x" << i + 1 << ", y" << i + 1 << ") = ";
+        std::cout << "(" << round(x * 10000) / 10000 << ", " << round(y * 10000) / 10000 << ")\n";
     }
 }
 
 float Pentagon::Square() {
-    float radius = SideLength / sqrt(2 * (1 - cos(72 * PI / 180)));
+    float radius = SideLength / sqrt(2 * (1 - cos(72 * PI / 180))); // Radius to get square
     return radius * radius * sin(72 * PI / 180) / 2 * 5;
 }
 

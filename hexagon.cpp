@@ -1,7 +1,7 @@
-#include "hexagon.hpp"
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include "hexagon.hpp"
 
 #define PI 3.14159265
 
@@ -23,15 +23,15 @@ void Hexagon::GetCenter() {
 }
 
 void Hexagon::PrintCenter() {
-    std::cout << "x = " << Center_x << "  " << "y = " << Center_y << "\n";
+    std::cout << "(" << Center_x << ", " << Center_y << ")\n";
 }
 
 void Hexagon::PrintCoordinates() {
     for (int i = 0; i < 6; i++) {
         float x = Center_x + cos(60 * i * PI / 180) * SideLength;
         float y = Center_y + sin(60 * i * PI / 180) * SideLength;
-        std::cout << "x" << i + 1 << " = " << round(x * 10000) / 10000 << "  ";
-        std::cout << "y" << i + 1 << " = " << round(y * 10000) / 10000 << "\n";
+        std::cout << "(x" << i + 1 << ", y" << i + 1 << ") = ";
+        std::cout << "(" << round(x * 10000) / 10000 << ", " << round(y * 10000) / 10000 << ")\n";
     }
 }
 

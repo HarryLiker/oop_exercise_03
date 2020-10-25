@@ -23,7 +23,7 @@ int menu() {
             for(int i = 0; i < figures.size(); i++) {
                 figures[i]->PrintName();
                 std::cout << "\n";
-                std::cout << "Center: ";
+                std::cout << "Center (x, y): ";
                 figures[i]->PrintCenter();
                 figures[i]->PrintCoordinates();
                 std::cout << "Square: " << figures[i]->Square() << "\n\n";

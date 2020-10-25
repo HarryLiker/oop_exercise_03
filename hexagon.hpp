@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include "figure.hpp"
 
 class Hexagon: public Figure { // Сторона шестиугольника равна расстоянию от его центра до вершины
