@@ -11,6 +11,11 @@ Hexagon::Hexagon(float center_x, float center_y, float side): Figure("hexagon"),
 
 void Hexagon::GetSide() {
     std::cin >> SideLength;
+    while(SideLength < 0) {
+        std::cout << "Entered incorrect size!\n";
+        std::cout << "Pleale, re-enter side size: ";
+        std::cin >> SideLength;
+    }
 }
 
 void Hexagon::GetCenter() {

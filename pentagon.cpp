@@ -17,6 +17,11 @@ void Pentagon::GetCenter() {
 
 void Pentagon::GetSide() {
     std::cin >> SideLength;
+    while(SideLength < 0) {
+        std::cout << "Entered incorrect size!\n";
+        std::cout << "Pleale, re-enter side size: ";
+        std::cin >> SideLength;
+    }
 }
 
 void Pentagon::PrintCenter() {
@@ -33,7 +38,6 @@ void Pentagon::PrintCoordinates() {
         std::cout << "x" << i + 1 << " = " << round(x * 10000) / 10000 << "  ";
         std::cout << "y" << i + 1 << " = " << round(y * 10000) / 10000 << "\n";
     }
-    std::cout << "\n";
 }
 
 float Pentagon::Square() {

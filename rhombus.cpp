@@ -12,6 +12,11 @@ void Rhombus::GetCenter() {
 
 void Rhombus::GetSide() {
     std::cin >> SideLength;
+    while(SideLength < 0) {
+        std::cout << "Entered incorrect size!\n";
+        std::cout << "Pleale, re-enter side size: ";
+        std::cin >> SideLength;
+    }
 }
 
 void Rhombus::GetAngle() {
