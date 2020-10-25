@@ -14,6 +14,7 @@ public:
     Pentagon(float center_x, float center_y, float side);
     void GetCenter();
     void GetSide();
+    //void PrintCenter() override;
     void PrintCoordinates() override;
     float Square() override;
     ~Pentagon();

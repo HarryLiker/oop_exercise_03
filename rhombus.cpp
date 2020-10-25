@@ -26,7 +26,11 @@ void Rhombus::GetAngle() {
         }
     }
 }
-
+/*
+void Rhombus::PrintCenter() {
+    std::cout << "x = " << Center_x << "  " << "y = " << Center_y << "\n";
+}
+*/
 void Rhombus::PrintCoordinates() {
     float angle = Angle / 2;
     float radius_x = cos(angle * PI / 180) * SideLength;
@@ -49,3 +53,5 @@ void Rhombus::PrintCoordinates() {
 float Rhombus::Square() {
     return round(cos(Angle * PI / 360) * sin(Angle * PI / 360) * SideLength * SideLength * 2 * 10000) / 10000;
 }
+
+Rhombus::~Rhombus() {}

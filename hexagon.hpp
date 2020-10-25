@@ -13,6 +13,7 @@ public:
     Hexagon(float center_x, float center_y, float side);
     void GetSide();
     void GetCenter();
+    //void PrintCenter() override;
     void PrintCoordinates() override;
     float Square() override;
     ~Hexagon();

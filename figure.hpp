@@ -9,6 +9,8 @@ protected:
 public:
     Figure(const char *figure);
 
+    //virtual void PrintCenter();
+
     virtual void PrintCoordinates() = 0;
 
     virtual float Square() = 0;

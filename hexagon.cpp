@@ -16,7 +16,11 @@ void Hexagon::GetSide() {
 void Hexagon::GetCenter() {
     std::cin >> Center_x >> Center_y;
 }
-
+/*
+void Hexagon::PrintCenter() {
+    std::cout << "x = " << Center_x << "  " << "y = " << Center_y << "\n";
+}
+*/
 void Hexagon::PrintCoordinates() {
     for (int i = 0; i < 6; i++) {
         float x = Center_x + cos(60 * i * PI / 180) * SideLength;

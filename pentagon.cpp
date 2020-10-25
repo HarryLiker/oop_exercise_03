@@ -18,6 +18,11 @@ void Pentagon::GetCenter() {
 void Pentagon::GetSide() {
     std::cin >> SideLength;
 }
+/*
+void Pentagon::PrintCenter() {
+    std::cout << "x = " << Center_x << "  " << "y = " << Center_y << "\n";
+}
+*/
 
 void Pentagon::PrintCoordinates() {
     // float radius = sqrt( (SideLength * SideLength + 2 * cos(72 * PI / 180)) / 2 );
