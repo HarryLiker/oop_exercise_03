@@ -15,7 +15,7 @@ public:
     void GetCenter();
     void GetSide();
     void GetAngle();
-    //void PrintCenter() override;
+    void PrintCenter() override;
     void PrintCoordinates() override;
     float Square() override;
     ~Rhombus();

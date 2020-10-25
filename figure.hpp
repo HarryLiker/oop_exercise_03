@@ -9,7 +9,9 @@ protected:
 public:
     Figure(const char *figure);
 
-    //virtual void PrintCenter();
+    void PrintName();
+
+    virtual void PrintCenter() = 0;
 
     virtual void PrintCoordinates() = 0;
 
