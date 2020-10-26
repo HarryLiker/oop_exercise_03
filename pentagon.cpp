@@ -4,7 +4,6 @@
 #include "pentagon.hpp"
 #include <iomanip>
 
-
 #define PI 3.14159265
 
 Pentagon::Pentagon(): Center_x(0), Center_y(0), SideLength(0), Figure("pentagon") {}
@@ -27,7 +26,6 @@ void Pentagon::GetSide() {
 void Pentagon::PrintCenter() {
     std::cout << "(" << Center_x << ", " << Center_y << ")\n";
 }
-
 
 void Pentagon::PrintCoordinates() {
     float radius = SideLength / sqrt(2 * (1 - cos(72 * PI / 180))); // Radius to get coorditates

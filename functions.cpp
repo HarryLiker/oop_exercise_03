@@ -13,7 +13,6 @@ Figure *enter_in_figure(std::string figure) {
         std::cout << "Write an angle: ";
         ptr_rhombus->GetAngle();
         ptr_figure = (Figure*)ptr_rhombus;
-        //delete ptr_rhombus;
     }
     else if (figure == "pentagon") {
         Pentagon *ptr_pentagon = new Pentagon();
@@ -22,7 +21,6 @@ Figure *enter_in_figure(std::string figure) {
         std::cout << "Write side size: ";
         ptr_pentagon->GetSide();
         ptr_figure = (Figure*)ptr_pentagon;
-        //delete ptr_pentagon;
     }
     else if (figure == "hexagon") {
         Hexagon *ptr_hexagon = new Hexagon();
@@ -31,7 +29,6 @@ Figure *enter_in_figure(std::string figure) {
         std::cout << "Write side size: ";
         ptr_hexagon->GetSide();
         ptr_figure = (Figure*)ptr_hexagon;
-        //delete ptr_hexagon;
     }
     return ptr_figure;
 }
@@ -60,5 +57,7 @@ float square_all_figures(std::vector<Figure*> vector) {
 
 // Delete figure in vector
 void figure_delete(std::vector<Figure*> &vector, int index) {
+    Figure *ptr = vector[index];
     vector.erase(vector.begin() + index);
+    delete ptr;
 }

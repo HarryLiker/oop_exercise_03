@@ -45,6 +45,10 @@ int menu() {
             std::cout << "The figure has been removed!\n";
         }
         else if (value == 5) {
+            for (int i = 0; i < figures.size(); i++) {
+                delete figures[i];
+            }
+            figures.clear();
             std::cout << "Program completed!";
             return 0;
         }
